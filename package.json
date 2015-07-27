@@ -1,0 +1,35 @@
+{
+  "name": "embed-particle",
+  "version": "0.0.1",
+  "description": "embed image in particle plist file",
+  "main": "lib/embed-particle.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/builden/embed-particle.git"
+  },
+  "keywords": [
+    "particle",
+    "bplist",
+    "embed",
+    "plist"
+  ],
+  "author": "builden <billdeng@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "plist-json": "0.0.2"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-istanbul": "^0.10.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-mocha": "^2.1.3",
+    "mocha": "^2.2.5"
+  }
+}
