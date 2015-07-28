@@ -11,9 +11,20 @@ describe('embed-particle', function() {
     fs.mkdirSync(tmpPath);
   });
 
-  it(function(done) {
+  it('embed and extract', function(done) {
     ep.embed('test/res/firework.plist', tmpPath, function(err) {
       expect(err).not.exist;
+      ep.extract('test/tmp-result-res/firework.plist/', function(err) {
+        expect(err).not.exist;
+        done();
+      });
+    });
+  });
+
+  it('extra have not textureImageData', function(done) {
+    ep.extract('test/res/firework.plist', function(err) {
+      expect(err).to.equal('not find');
+      done();
     });
   });
 });
