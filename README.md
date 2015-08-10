@@ -4,7 +4,10 @@ embed image in particle plist file
 ## How to use
 ```js
 var ep = require('embed-particle');
-ep.embed(plistPath, destPath, function(err) {});
+var opts = {
+  force: true // textureImageData存在，也强制使用textureFileName指向的图片[false]
+}
+ep.embed(plistPath, destPath, opts, function(err) {});
 
 ep.extract(plistPath, function(err) {});
 ```

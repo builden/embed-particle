@@ -1,6 +1,6 @@
 {
   "name": "embed-particle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "embed image in particle plist file",
   "main": "lib/embed-particle.js",
   "scripts": {
@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "debug": "^2.2.0",
+    "fs-extra": "^0.23.1",
     "plist-json": "0.0.2"
   },
   "devDependencies": {

@@ -2,7 +2,6 @@ var expect = require('chai').expect;
 var del = require('del');
 var fs = require('fs');
 var ep = require('../lib/embed-particle.js');
-var plist = require('plist');
 
 var tmpPath = 'test/tmp-result-res';
 describe('embed-particle', function() {
@@ -25,6 +24,16 @@ describe('embed-particle', function() {
     ep.extract('test/res/firework.plist', function(err) {
       expect(err).to.equal('not find');
       done();
+    });
+  });
+
+  it('embed and textureImageData exist', function(done) {
+    ep.embed('test/res/reward.plist', tmpPath, function(err) {
+      expect(err).to.not.be.ok;
+      ep.extract('test/tmp-result-res/reward.plist/', function(err) {
+        expect(err).to.not.be.ok;
+        done();
+      });
     });
   });
 });
