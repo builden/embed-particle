@@ -1,6 +1,6 @@
 {
   "name": "embed-particle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "embed image in particle plist file",
   "main": "lib/embed-particle.js",
   "scripts": {
